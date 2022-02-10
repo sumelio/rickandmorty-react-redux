@@ -4,5 +4,5 @@ import React from 'react';
 import "./style/Header.scss";
 
 export default function Header() {
-  return <div className='container-header'>Header..</div>;
+  return <div className='container-header'></div>;
 }
