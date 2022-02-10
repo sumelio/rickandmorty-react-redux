@@ -1,3 +1,8 @@
+## Install dependencies
+```bash
+npm run i
+```
+
 ## Developer 
 ```bash
 npm run dev
