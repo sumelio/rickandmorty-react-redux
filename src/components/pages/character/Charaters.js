@@ -20,8 +20,6 @@ import Pagination from "./Pagination";
 
 // Style
 import "./style/Characters.scss";
-import Spinner from "../../common/Spinner";
-
 
 const Charaters = ({
   characters,
