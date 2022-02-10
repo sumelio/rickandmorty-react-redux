@@ -1,0 +1,97 @@
+@import "./../../../../sass/variables";
+
+$picture-size: 106px;
+
+.containerCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: space-between;
+  width: 108%;
+  margin-top: 20px;
+  height: calc(#{$picture-size} + 50px);
+  color: $dark-color;
+  font-weight: bold;
+  &-picture {
+    width: calc(#{$picture-size} + 50px);
+    border-radius: 6px;
+  }
+  &-detail {
+    padding: 8px 10px 15px 12px;
+    margin-left: 8px;
+    width: 100%;
+    background-color: $background-color;
+    position: relative;
+    &-name {
+      font-size: large;
+      padding-bottom: 4px;
+    }
+    &-status {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: stretch;
+      font-size: medium;
+      padding-bottom: 4px;
+      &-text {
+        padding-left: 5px;
+      }
+    }
+    &-species {
+      font-size: medium;
+    }
+    &-button {
+      position: absolute;
+      bottom: 8px;
+      right: 6px;
+    }
+  }
+}
+
+
+@media screen and  (min-width: $tablet-width) {
+  .containerCard {
+    height: $picture-size;
+    &-picture {
+      width: $picture-size
+    }
+  }
+}
+
+@media screen and  (min-width: 993px) {
+  .containerCard {
+    width: 48.6%;
+    height: $picture-size;
+    &-picture {
+      width: $picture-size
+    }
+    &-detail {
+      min-width: 170px;
+      margin-left: 10px;
+      &-name {
+        padding-bottom: 4px;
+        margin: 0;
+        width: 100%;
+        font-size: large;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &-species {
+        font-size: medium;
+        margin: 0;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+
+

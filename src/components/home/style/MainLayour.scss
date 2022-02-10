@@ -1,0 +1,19 @@
+@import './../../../sass/variables';
+
+.mainLayoutContainer {
+  width: 1024px;
+  margin: auto;
+  height: 100%;
+  min-height: 100vh;
+  -webkit-box-shadow: 6px 7px 23px 1px rgba(0,0,0,0.76); 
+  box-shadow: 6px 7px 23px 1px rgba(0,0,0,0.76);
+  .content {
+    padding: $padding;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .mainLayoutContainer {
+      max-width: 100%;
+  }
+}

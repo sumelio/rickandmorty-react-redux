@@ -1,0 +1,20 @@
+
+$status-alive: rgb(56, 190, 15);
+$status-dead: rgb(253, 124, 124);
+$status-unknown: #bbb;
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: $status-dead;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .Alive {
+    background-color:$status-alive;
+  }
+
+  .unknown {
+    background-color:$status-unknown;
+  }

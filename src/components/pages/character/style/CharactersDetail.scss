@@ -1,0 +1,53 @@
+@import './../../../../sass/variables';
+
+$picture-size: 60px;
+
+.containerDetail {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 400px;
+  background-color: $background-color;
+  padding: 10px;
+  &-picture {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    max-width: 200px;
+    border-radius: 6px;
+  }
+  &-title {
+     display: flex;
+     justify-content: center;
+     padding: 10px;
+     font-size: x-large;
+     font-weight: bold;
+  }
+  &-name {
+    display: flex;
+    padding: 10px 10px 10px 30px;
+    font-size: x-large;
+    font-weight: bold;
+ }
+  &-list {
+    font-size: medium;
+    font-weight: bold;
+ }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .containerDetail {
+    margin-left: calc(#{$padding} - 24px);
+    width: 36%;
+    min-height: 56vh;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .containerDetail {
+    margin-left: calc(#{$padding} - 24px);
+    width: 28%;
+    min-height: 56vh;
+  }
+}
+

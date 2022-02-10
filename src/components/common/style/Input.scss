@@ -1,0 +1,15 @@
+@import "./../../../sass/_variables";
+
+.inputText {
+  min-width: calc(100% - #{$button-width} - #{$padding} - 10px);
+  border: solid 3px $dark-color;
+  font-size: large;
+  outline: 0;
+}
+
+
+@media (max-width: $mobile-width) {
+  .inputText {
+    min-width: auto;
+  }
+}

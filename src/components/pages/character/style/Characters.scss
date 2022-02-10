@@ -1,0 +1,44 @@
+@import "./../../../../sass/variables";
+
+.containerCharacters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.listCharacters {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  max-width: 100%;
+}
+
+.containerListCharacters {
+}
+
+@media screen and (min-width: $tablet-width) {
+  .listCharacters {
+    max-width: 58%;
+  }
+  .containerListCharacters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .listCharacters {
+    max-width: 68%;
+  }
+}

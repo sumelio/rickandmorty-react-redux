@@ -1,0 +1,19 @@
+@import './../../../../sass/_variables';
+
+.searchBarContainer {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+    width: 100%;
+}
+
+@media (max-width: $mobile-width) {
+	.searchBarContainer {
+		flex-direction: column;
+		justify-content: space-between;
+		height: calc(#{$button-height} + #{$padding}) ;
+	}
+  }

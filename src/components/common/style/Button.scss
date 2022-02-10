@@ -1,0 +1,31 @@
+@import "./../../../sass/_variables";
+
+.mainButton {
+  height: $button-height;
+  background-color: $light-color;
+  border-color: $light-color;
+  border-radius: 4px;
+  border: 0;
+  font-size: large;
+  font-weight: bold;
+  width: $button-width;
+  color: $dark-color;
+  cursor: pointer;
+}
+
+.small {
+  font-size: small;
+  height: calc(#{$button-height} - 10px);
+  width: calc(#{$button-width} - 50px);
+  &_disable {
+    cursor: not-allowed;
+    background-color: $light-color-disable;
+    border-color: $light-color-disable;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .mainButton {
+    width: 100%;
+  }
+}
