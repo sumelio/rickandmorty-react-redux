@@ -14,7 +14,11 @@ const getQuery = (search, page) => {
     page
   };
 
-  return search ? query : undefined;
+  if(!search) {
+    delete query.search
+  }
+
+  return query;
 };
 
 export const fetchCharacters = createAction(

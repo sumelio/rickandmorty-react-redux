@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 import "./style/message.scss";
+import Spinner from "../Spinner";
 
-const Message = ({ text}) => (
+const Message = ({ show, text}) => (
   <div className={`conatainerMessage`}>
-    {text}
+    {show ? text : <Spinner size={100} />}
   </div>
 );
 

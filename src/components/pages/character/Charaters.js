@@ -20,6 +20,7 @@ import Pagination from "./Pagination";
 
 // Style
 import "./style/Characters.scss";
+import Spinner from "../../common/Spinner";
 
 
 const Charaters = ({
@@ -46,7 +47,8 @@ const Charaters = ({
     };
 
     load();
-  }, [searchQuery, loading, abortController, fetchCharacters]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery, fetchCharacters]);
 
   useEffect(() => {
     const load = async () => {
@@ -57,7 +59,7 @@ const Charaters = ({
 
     load();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page, fetchCharacters]);
 
   useEffect(() => {
     
@@ -76,7 +78,7 @@ const Charaters = ({
     <Numbers />
     <div className={`containerCharacters`}>
       <div className={`listCharacters`}>
-      {characterList && characterList.length ? (
+      {!isLoading && characterList && characterList.length ? 
           characterList.map((item, index) => (
             <CharacterCard
               key={index}
@@ -84,9 +86,9 @@ const Charaters = ({
               character={item}
             />
           ))
-        ) : (
+        : 
           <Message show={!isLoading} text={message} />
-        )}
+        }
         <Pagination page={page} setPage={setPage} pagination={pagination} />
       </div>
       <ProductDetail character={character} />
