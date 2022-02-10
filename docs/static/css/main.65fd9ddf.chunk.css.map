@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAGA,KACE,iBAAkB,CAClB,QAAS,CACT,QAAU","file":"main.65fd9ddf.chunk.css","sourcesContent":["@import '_variables';\r\n\r\n// Layout\r\nbody {\r\n  overflow-x: hidden;\r\n  border: 0;\r\n  margin: 0%;\r\n}\r\n\r\n"]}
