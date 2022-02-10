@@ -40,17 +40,23 @@ const Charaters = ({
   useEffect(() => {
     const load = async () => {
       loading(true);
+      await fetchCharacters(searchQuery, abortController, 1)
+      await loading(false);
+    };
+
+    load();
+  }, [searchQuery, loading, abortController, fetchCharacters]);
+
+  useEffect(() => {
+    const load = async () => {
+      loading(true);
       await fetchCharacters(searchQuery, abortController, page)
       await loading(false);
     };
 
     load();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchQuery, loading, abortController, fetchCharacters, page]);
-
-  useEffect(() => {
-    setPage(1)
-  }, [searchQuery])
+  }, [page]);
 
   useEffect(() => {
     

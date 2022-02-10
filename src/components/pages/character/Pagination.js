@@ -7,23 +7,32 @@ import Button from "../../common/Button";
 import "./style/Pagination.scss";
 
 export default function Pagination({ page, pagination, setPage }) {
+
+  const isNext = () => {
+    return page === (pagination && pagination.pages)
+  }
+
+  const isPrev = () => {
+    return page === 1
+  }
+
   return (
     <div className="containerPagination">
       <Button
-        size={`${ page === 1 ? 'small_disable':'' }`}
+        size={`${ isPrev() ? 'small_disable':'' }`}
         content="Anterior"
         type="none"
-        onClick={() => pagination.prev && setPage(page - 1)}
+        onClick={() => page > 1 && setPage(page - 1)}
       />
       <span className="containerPagination-page">
         {" "}
         {page} de {pagination && pagination.pages}{" "}
       </span>
       <Button
-        size={`${ page === (pagination && pagination.pages) ? 'small_disable':'' }`}
+        size={`${  isNext() ? 'small_disable':'' }`}
         content="Siguiente"
         type="none"
-        onClick={() => pagination.next && setPage(page + 1)}
+        onClick={() => !isNext() && setPage(page + 1)}
       />
     </div>
   );
