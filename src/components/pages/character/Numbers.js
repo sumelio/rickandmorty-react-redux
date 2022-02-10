@@ -73,7 +73,6 @@ Numbers.defaultProps = {
 };
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     charactersNumber: getCharactersNumberSelector(state),
     locationsNumber: getLocationsSelector(state),

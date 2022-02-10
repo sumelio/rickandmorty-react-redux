@@ -65,7 +65,6 @@ export const getLocations= (query, abortController) => async () => {
           return { message: "Algo salió mal, inténtelo de nuevo." };
       }
     }
-    debugger
     const data = await response.json()
     return data
   } catch (err) {
