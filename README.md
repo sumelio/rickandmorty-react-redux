@@ -3,12 +3,12 @@
 npm run i
 ```
 
-## Developer 
+## Run developer 
 ```bash
 npm run dev
 ```
 
-## Build
+## Run Build
 ```bash
 npm run build
 ```

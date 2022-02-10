@@ -40,6 +40,7 @@ const Charaters = ({
   useEffect(() => {
     const load = async () => {
       loading(true);
+      setPage(1)
       await fetchCharacters(searchQuery, abortController, 1)
       await loading(false);
     };
